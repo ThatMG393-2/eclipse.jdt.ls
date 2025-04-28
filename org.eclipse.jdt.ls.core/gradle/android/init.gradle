@@ -466,6 +466,8 @@ class JavaLanguageServerAndroidPlugin implements Plugin<Project> {
 
 allprojects {
     afterEvaluate {
-        it.getPlugins().apply(JavaLanguageServerAndroidPlugin)
+		afterEvaluate {
+			it.getPlugins().apply(JavaLanguageServerAndroidPlugin)
+		}
     }
 }
